@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Duncan Hoyland", "Charlie Franklin-WHite","Jamie Burrow", 
+           "Dru Keiri", "Sean Wuang", "Annie Loi"),
+  github_username = c("duncan-hoyland", "cfranklinwhite", "jamie-burrow", 
+                      "squarehedge34", "sw-005", "aaaanniie"), 
+  colour = c("seagreen", "blue", "blue", 
+             "purple", "green", "blue"),
+  hobby = c("rugby", "poker", "climbing", 
+            "basketball", "gaming","gaming"),
+  favourite_number = c(2, 2, 2, 6, 8, 7)
   )
 
 team_data
@@ -47,19 +47,19 @@ p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+Bar graph is showing farourite number of each team member against their username, with the bars being colour coded to show each team members favourite colour. Duncan has the coolest colour
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "git hub username", 
+          y = "favourite number",
+          title = "Super cool graph!")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+Labs adds a title and axis label, pretty cool feature.
 
 ### Exercise 20
 
@@ -69,4 +69,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+There'd be so many different hobbies the data would be hard to easily interpret making it uninformative. Make it better by giving categories for people to select, restrcting the choice, grouping similar things such as sports. 
